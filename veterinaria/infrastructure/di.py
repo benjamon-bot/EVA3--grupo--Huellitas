@@ -5,3 +5,9 @@ from veterinaria.infrastructure.repositories import (
 def get_dueno_repository(): return DjangoDuenoRepository()
 def get_mascota_repository(): return DjangoMascotaRepository()
 def get_servicio_repository(): return DjangoServicioRepository()
+
+
+
+
+
+
