@@ -1,0 +1,3 @@
+from .dueno_repository import DjangoDuenoRepository
+from .mascota_repository import DjangoMascotaRepository
+from .servicio_repository import DjangoServicioRepository
