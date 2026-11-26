@@ -10,3 +10,9 @@ from .servicio_use_cases import (
     ListarServiciosUseCase, ObtenerServicioUseCase, CrearServicioUseCase,
     ActualizarServicioUseCase, EliminarServicioUseCase,
 )
+
+from .atencion_use_cases import (
+    ActualizarAtencionUseCase, CambiarEstadoAtencionUseCase, CrearAtencionUseCase,
+    EliminarAtencionUseCase, ListarAtencionesUseCase,
+    ObtenerAtencionUseCase,
+)
