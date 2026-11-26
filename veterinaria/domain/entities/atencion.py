@@ -5,13 +5,7 @@ from typing import List, Optional
 
 from .detalle_atencion import DetalleAtencion
 
-ESTADOS_ATENCION = (
-    "AGENDADA",
-    "REALIZADA",
-    "PAGADA",
-    "CANCELADA",
-)
-
+ESTADOS_ATENCION = ("AGENDADA", "REALIZADA", "PAGADA", "CANCELADA")
 TRANSICIONES_ATENCION = {
     "AGENDADA": ("REALIZADA", "CANCELADA"),
     "REALIZADA": ("PAGADA",),
@@ -31,15 +25,14 @@ class Atencion:
     fecha: Optional[datetime] = None
     id: Optional[int] = None
 
-    def calcular_total(self) -> Decimal:
+    def calcular_total(self):
         return sum(
             (detalle.subtotal for detalle in self.detalles),
             Decimal("0.00"),
         )
 
-    def recalcular_total(self) -> None:
+    def recalcular_total(self):
         self.total = self.calcular_total()
 
-    def puede_pasar_a(self, nuevo_estado: str) -> bool:
+    def puede_pasar_a(self, nuevo_estado):
         return nuevo_estado in TRANSICIONES_ATENCION[self.estado]
-

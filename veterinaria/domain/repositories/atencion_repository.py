@@ -14,9 +14,7 @@ class AtencionRepository(ABC):
 
     @abstractmethod
     def existe_agendada_en_fecha(
-        self,
-        mascota_id: int,
-        fecha: date,
+        self, mascota_id: int, fecha: date
     ) -> bool: ...
 
     @abstractmethod
@@ -27,9 +25,7 @@ class AtencionRepository(ABC):
 
     @abstractmethod
     def cambiar_estado(
-        self,
-        atencion: Atencion,
-        nuevo_estado: str,
+        self, atencion: Atencion, nuevo_estado: str
     ) -> Atencion: ...
 
     @abstractmethod

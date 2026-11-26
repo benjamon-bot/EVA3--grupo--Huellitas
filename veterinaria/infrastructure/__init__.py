@@ -1,0 +1,6 @@
+from .dueno_repository import DjangoDuenoRepository
+from .mascota_repository import DjangoMascotaRepository
+from .servicio_repository import DjangoServicioRepository
+from .atencion_repository import DjangoAtencionRepository
+from .detalle_atencion_repository import DjangoDetalleAtencionRepository
+
